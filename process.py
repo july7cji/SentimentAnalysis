@@ -48,9 +48,9 @@ def output(filepath, sentence):
 if __name__=="__main__":
     SEGMENT = False # true if segmenter is needed
     SETCORPUS = False # true if you want to generate training and testing datas
-    negfile = "/home/nubia/jichen/workspace/classifier/Sentiment_analysis/SentimentAnalysis/Book_del_4000/neg/neg.txt"
+    negfile = "/home/july7/workspace/classifier/Sentiment_analysis/SentimentAnalysis/Book_del_4000/neg/neg.txt"
     negpro_file = negfile + ".pro"
-    posfile = "/home/nubia/jichen/workspace/classifier/Sentiment_analysis/SentimentAnalysis/Book_del_4000/pos/pos.txt"
+    posfile = "/home/july7/workspace/classifier/Sentiment_analysis/SentimentAnalysis/Book_del_4000/pos/pos.txt"
     pospro_file = posfile + ".pro"
     if SEGMENT:
         writeFile(negpro_file, segment(negfile))

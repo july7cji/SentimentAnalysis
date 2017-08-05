@@ -1,6 +1,6 @@
 # -- preprocess -- #                                                                                                                                                  
 training_set=/home/july7/workspace/classifier/Sentiment_analysis/SentimentAnalysis/Jingdong_NB_4000
-python pre_process.py --input_pos ${training_set}/pos/pos.txt.pro --input_neg ${training_set}/neg/neg.txt.pro --train_pos ${training_set}/pos/pos.txt.train --train_neg ${training_set}/neg/neg.txt.train --test_pos ${training_set}/pos/pos.txt.test --test_neg ${training_set}/neg/neg.txt.test
+python process.py --input_pos ${training_set}/pos/pos.txt.pro --input_neg ${training_set}/neg/neg.txt.pro --train_pos ${training_set}/pos/pos.txt.train --train_neg ${training_set}/neg/neg.txt.train --test_pos ${training_set}/pos/pos.txt.test --test_neg ${training_set}/neg/neg.txt.test
  
 # -- rnnlm -- #
 mkdir rnnlm
