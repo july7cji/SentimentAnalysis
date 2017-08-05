@@ -12,7 +12,7 @@ g++ -lm -O3 -march=native -Wall -funroll-loops -ffast-math -c rnnlmlib.cpp
 g++ -lm -O3 -march=native -Wall -funroll-loops -ffast-math rnnlm.cpp rnnlmlib.o -o rnnlm
  
  
-# construct positive language model
+# constructs a positive language model
 rm -rf neg.model
 rm -rf pos.model
 #sed '1,200d' means deletes line 1 to 200
@@ -20,7 +20,7 @@ head -n 200 ${training_set}/pos/pos.txt.train > val.txt
 cat ${training_set}/pos/pos.txt.train | sed '1,200d' > train.txt
 ./rnnlm -rnnlm pos.model -train train.txt -valid val.txt -hidden 50 -direct-order 3 -direct 200 -class 100 -debug 2 -bptt 4 -bptt-block 10 -binary
  
-# constructs negative language model
+# constructs a negative language model
 head -n 200 ${training_set}/neg/neg.txt.train > val.txt
 cat ${training_set}/neg/neg.txt.train | sed '1,200d' > train.txt
 ./rnnlm -rnnlm neg.model -train train.txt -valid val.txt -hidden 50 -direct-order 3 -direct 200 -class 100 -debug 2 -bptt 4 -bptt-block 10 -binary
